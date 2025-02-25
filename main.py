@@ -1,82 +1,75 @@
-# 1
-def func1(num1, num2,num3):
-    if num1 > num2:
-        return num1+num3
-    return num2
+# 1.
+def func1(num):
+    x = num % 10
+    temp = num // 10
+    temp = x * 1000 + temp
+    return temp
 
 
-print(func1(10, 20))
+print(func1(1234))
 
 
-# 2
-def func2(num1, num2, num3):
-    x = func1(num1, num2)
-    if x > num3:
-        return x
-    else:
-        return num3
+# 2.
+def func2(num):
+    dig1 = num % 10
+    dig2 = num % 100 // 10
+    dig3 = num // 100
+    newnum = dig1 * 100 + dig2 * 10 + dig3
+    return newnum
 
 
-print(func2(2, 5, 1))
+print(func2(123))
 
 
-# 3
-def func3(num):
-    newnum = num % 10 * 100 + num // 10 % 10 * 10 + num // 100
-    return abs(newnum - num)
+# 3.
+def func3(pupils_count):
+    return pupils_count // 2 + pupils_count % 2
 
 
-def abs(n):
-    if n < 0:
-        return n * -1
-    else:
-        return n
+print(func3(51))
 
 
-print(func3(123))
+# 4.
+def func4(side):
+    return side ** 3
 
 
-# 4
-def func4(num):
-    x = num // 10 % 10 * 10 + num % 10
-    if x < 50:
-        return num - x
-    return num + 100 - x
+print(func4(4))
 
 
-print(func4(453))
+# 5.
+def func5(hours, minutes, seconds):
+    return seconds + minutes * 60 + hours * 60 * 60
 
 
-# 5
-def days_in_month(month):
-    if month == 2:
-        return 28
-    if month == 4 or month == 6 or month == 9 or month == 11:
-        return 30
-    else:
-        return 31
+print(func5(2, 30, 23))
 
 
-print(days_in_month(5))
+# 6.
+def func6(money):
+    count = 0
+    sum = money // 10
+    count = sum
+    money -= sum * 10
+    sum = money // 5
+    count += sum
+    money -= sum * 5
+    sum = money // 2
+    count += sum
+    money -= sum * 2
+    sum = money // 1
+    count += sum
+    money -= sum * 2
+    return count
 
 
-# 6
-def tomorrow(date):
-    days = days_in_month(date // 100 % 10)
-    print(date // 10000)
-    if date // 10000 == days:
-        return 1 * 10000 + (date // 100 % 10 + 1) * 100 + date // 10 % 10 * 10 + date % 10
-    return date + 10000
+print(func6(36))
 
 
-print(tomorrow(280224))
+# 7.
+def func7(num, digit):
+    digit = 10 ** (digit - 1)
+    return int(num // digit % (digit / 10))
 
-#7
-def func7(n):
-    if n == 0:
-        return 0
-    elif n == 1:
-        return 1
-    return func7(n - 1) + func7(n - 2)
 
-print(func7(9))
+print(func7(5678, 3))
