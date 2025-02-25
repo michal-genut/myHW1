@@ -3,7 +3,7 @@ $(document).ready(function() {
     let cardColors = [...colors, ...colors, ...colors, ...colors]; // יצירת מערך עם כפולות צבעים
     cardColors = shuffle(cardColors);
 
-    let firstCard = null;
+    let firstCard = 'chaya';
     let secondCard = null;
     let lockBoard = false;
     let matchedPairs = 0;
