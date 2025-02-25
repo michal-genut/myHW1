@@ -1,2 +1,4 @@
 .vs/ 
 text.txt 
+*.txt
+/temp
