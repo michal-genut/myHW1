@@ -1,8 +1,8 @@
 # 1
-def func1(num1, num2):
+def func1(num1, num2,num4):
     if num1 > num2:
         return num1
-    return num2
+    return num2+num4
 
 
 print(func1(10, 20))
