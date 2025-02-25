@@ -3,9 +3,13 @@ $(document).ready(function() {
     let cardColors = [...colors, ...colors, ...colors, ...colors]; // יצירת מערך עם כפולות צבעים
     cardColors = shuffle(cardColors);
 
+<<<<<<< HEAD
     let firstCard1 = "chaya";
     let firstCard2 = "rivki";
     let firstCard3 = "michal";
+=======
+    let firstCard = 'michal';
+>>>>>>> cc4644a32869c8225660744b975bedb9cb6cb2aa
     let secondCard = null;
     let lockBoard = false;
     let matchedPairs = 0;
