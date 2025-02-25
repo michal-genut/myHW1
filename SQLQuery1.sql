@@ -1,5 +1,8 @@
 use employeedb
 select * from Employee_tbl
+--נסיון
+select * from Customer_tbl
+
 --1
 delete Customer_tbl 
 where custid in  
