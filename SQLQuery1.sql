@@ -3,6 +3,7 @@ select *from Customer_tbl
 select *from Orders_tbl
 --view
 --1
+--my project in sql i change it
 create view v_1
 as
 select c.CustID,c.CustName,c.CustAddress,c.CustCity,c.CustPhone,c.CustFax,c.EmpID,c.ManagerID,
